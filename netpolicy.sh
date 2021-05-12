@@ -1,20 +1,19 @@
-
-mkdir networkpolicies
-while IFS="" read -r line
+mkdir networkpolicies 
+while IFS="" read -r line 
 do
-  destpod=$(echo $line | awk '{print $1}')  ; port=$(echo $line | awk '{print $2}')
+  destpod=$(echo $line | awk '{print $1}')  ; port=$(echo $line | awk '{print $2}')  
   port=$(echo $line | awk '{print $2}')
   srcpod=$(echo $line | awk '{print $3}')
-cat <<EOF > networkpolicies/netp.$destpod.$srcpod.$port
+cat <<EOF > networkpolicies/netp.$destpod.$srcpod.$port.yaml 
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: netp.$destpod.$srcpod.$port
+  name: netp.$destpod.$srcpod.$port 
   namespace: kube-system
 spec:
   podSelector:
     matchLabels:
-      app: $destpod
+      app: $destpod 
   ingress:
     - from:
       - podSelector:
