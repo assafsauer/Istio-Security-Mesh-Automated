@@ -12,7 +12,7 @@ Plan:
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 4) multi cluster support (future plan)
 ```
-![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/ISTIO.diagram.png) 
+![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
 
 
 
