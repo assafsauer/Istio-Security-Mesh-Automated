@@ -8,7 +8,7 @@ The idea behind this repository is to automate Microsegmentation/networkpolicies
 plan: 
 
 1) automate Network Policie based on ISTIO logs (completed) 
-2) automate Authorization policies based on ISTIO logs and combine the networkpolicies and the Authorization policies (under construction)
+2) automate Authorization policies based on ISTIO logs (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 
 
