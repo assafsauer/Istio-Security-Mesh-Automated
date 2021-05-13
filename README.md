@@ -1,14 +1,14 @@
-# Istio-sec-automation
+# orchestrate/automate security and Authorization based Envoy Proxy Logs.
 
 
 the combination of Networkpolices and Authorization policies might be the ultimate approach for securing/isolting microservices.
-however , manually building such a configuraiton is almost infeasible,  specialy  when there are hunderds of services involved..
+however , manually building such a configuraiton is almost infeasible,  specialy when there are hundreds of services and containers involved.
 The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on the Envoy Logs.
 
 ```diff
 Plan:  
-1) automate Network Policie based on ISTIO logs (completed) 
-2) automate Authorization policies based on ISTIO logs (under construction)
+1) automate Network Policie based on the access logs (completed) 
+2) automate Authorization policies based on the access logs (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 4) multi cluster support (future plan)
 ```
