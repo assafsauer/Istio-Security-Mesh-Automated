@@ -1,9 +1,9 @@
 #  Automation of Networkpolicies/Authorization based Envoy Proxy Logs.
 
 
-the combination of Networkpolices and Authorization policies might be the ultimate approach for securing/isolting microservices. <br/>
-however , manually building such a configuraiton is almost infeasible,  specialy when there are hundreds of services and containers involved. <br/>
-The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on the Envoy Logs. <br/>
+the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices! <br/>
+however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved). <br/>
+The idea behind this repository is to automate Microsegmentation and Authorization with minimum probability of human error and false postivie.   <br/>
 
 ```diff
 Plan:  
