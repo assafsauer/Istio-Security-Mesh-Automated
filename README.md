@@ -10,7 +10,7 @@ Plan:
 1) automate Network Policie based on ISTIO logs (completed) 
 2) automate Authorization policies based on ISTIO logs (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
-4) multi cluster and hybride cloud support (future plan)
+4) multi cluster support (future plan)
 ```
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/ISTIO.diagram.png) 
 
