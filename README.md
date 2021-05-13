@@ -1,8 +1,6 @@
 # Istio-sec-automation
 
 
-# User-Provisioned Infrastructure (UPI): OpenShift 4.5 / NSX-T 3.0 (NCP)
-
 The idea behind this repository is to automate Netoworkpolices and ISTIO Authorization in parallel. 
 
 so its simple of that: 
@@ -13,6 +11,7 @@ kubectl apply -f networkpolicies/ -n default
 
 restuls:
 
+```diff
 root@jump-5:/home/sauer/istio2# kubectl get networkpolicies
 NAME                                             POD-SELECTOR         AGE
 netp.ad.frontend.9555                            app=ad               6s
@@ -29,3 +28,4 @@ netp.productcatalog.recommendationservice.3550   app=productcatalog   6s
 netp.recommendation.frontend.8080                app=recommendation   6s
 netp.shipping.checkoutservice.50051              app=shipping         6s
 netp.shipping.frontend.50051                     app=shipping         6s
+```
