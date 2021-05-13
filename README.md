@@ -5,12 +5,22 @@ the combination of Networkpolices and Authorization policies might be the ultima
 however , Manually building such a configuraiton is almost infeasible,  specialy  when there hunderds of services involved..
 The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on ISTIO Logs.
 
-plan: 
-
+```diff
+Plan:  
 1) automate Network Policie based on ISTIO logs (completed) 
 2) automate Authorization policies based on ISTIO logs (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
+```
 
+```diff
+## notes:
+1) the code is aggrigating and parsing the default structure of ISTIO  access log , Customising of istio access logs , might damage the script.
+Envoy official Access logging document: 
+https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#default-format-string
+
+2) kubectil is mandatory for the script execution. 
+
+```
 
 **##### automating Networkpolices is simple of that:** 
  
