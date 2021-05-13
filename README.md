@@ -1,7 +1,15 @@
 # Istio-sec-automation
 
 
+the combination of Networkpolices and Authorization policies might be the ultimate approach for securing/isolting microservices.
+however , Manually building such a configuraiton is almost infeasible,  specialy  when there hunderds of services involved..
 The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on ISTIO Logs.
+
+plan: 
+
+1) automate Network Policie based on ISTIO logs (completed) 
+2) automate Authorization policies based on ISTIO logs and combine the networkpolicies and the Authorization policies (under construction)
+3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 
 so its simple of that: 
 
