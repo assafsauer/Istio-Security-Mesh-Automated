@@ -1,7 +1,7 @@
 # Istio-sec-automation
 
 
-The idea behind this repository is to automate Netoworkpolices and ISTIO Authorization in parallel. 
+The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on ISTIO Logs.
 
 so its simple of that: 
 
@@ -9,7 +9,7 @@ python3 Istio-log-processing.py
 
 kubectl apply -f networkpolicies/ -n default
 
-restuls:
+as Restuls:
 
 ```diff
 root@jump-5:/home/sauer/istio2# kubectl get networkpolicies
