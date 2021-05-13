@@ -18,7 +18,7 @@ Plan:
 
 ```diff
 Notes:
-1) the code is aggrigating and parsing the default structure of ISTIO  access log , Customising of istio access logs , might damage the script.
+1) the code is aggrigating/parsing the default structure of Encoy access log , Customising the istio access logs , might damage the script.
 Envoy official Access logging document: 
 https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#default-format-string
 
