@@ -28,6 +28,11 @@ https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_l
 
 **##### automating Networkpolices is simple of that:** 
 ```diff
+
+kubectl apply -f demoapp/
+
+browse the app , or run traffic generator 
+
 python3 Istio-log-processing.py
 
 kubectl apply -f networkpolicies/ -n default
