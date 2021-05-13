@@ -11,8 +11,9 @@ plan:
 2) automate Authorization policies based on ISTIO logs and combine the networkpolicies and the Authorization policies (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 
-so its simple of that: 
 
+**##### automating Networkpolices is simple of that:** 
+ 
 python3 Istio-log-processing.py
 
 kubectl apply -f networkpolicies/ -n default
