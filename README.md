@@ -1,4 +1,4 @@
-# orchestrate/automate security and Authorization based Envoy Proxy Logs.
+#  Automation of Networkpolicies/Authorization based Envoy Proxy Logs.
 
 
 the combination of Networkpolices and Authorization policies might be the ultimate approach for securing/isolting microservices.
@@ -9,7 +9,7 @@ The idea behind this repository is to automate Microsegmentation/networkpolicies
 Plan:  
 1) automate Network Policie based on the access logs (completed) 
 2) automate Authorization policies based on the access logs (under construction)
-3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
+3) Build Traffic Generator based on access logs (under construction)
 4) multi cluster support (future plan)
 ```
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
