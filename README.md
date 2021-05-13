@@ -2,8 +2,8 @@
 
 
 the combination of Networkpolices and Authorization policies might be the ultimate approach for securing/isolting microservices.
-however , Manually building such a configuraiton is almost infeasible,  specialy  when there hunderds of services involved..
-The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on ISTIO Logs.
+however , manually building such a configuraiton is almost infeasible,  specialy  when there are hunderds of services involved..
+The idea behind this repository is to automate Microsegmentation/networkpolicies and ISTIO Authorization based on the Envoy Logs.
 
 ```diff
 Plan:  
