@@ -11,6 +11,9 @@ Plan:
 2) automate Authorization policies based on ISTIO logs (under construction)
 3) Create Traffic Generator based on the traffic logs for automating tests (under construction)
 ```
+![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/ISTIO.diagram.png) 
+
+
 
 ```diff
 Notes:
