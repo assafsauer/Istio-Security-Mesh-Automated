@@ -23,14 +23,14 @@ https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_l
 ```
 
 **##### automating Networkpolices is simple of that:** 
- 
+```diff
 python3 Istio-log-processing.py
 
 kubectl apply -f networkpolicies/ -n default
 
 as Restuls:
 
-```diff
+
 root@jump-5:/home/sauer/istio2# kubectl get networkpolicies
 NAME                                             POD-SELECTOR         AGE
 netp.ad.frontend.9555                            app=ad               6s
