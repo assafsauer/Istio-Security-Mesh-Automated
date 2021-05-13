@@ -23,7 +23,7 @@ dataset = pd.read_csv(input_file)
 df = pd.DataFrame(dataset)
 cols = [13,18]
 df = df[df.columns[cols]]
-print(df)
+#print(df)
 
 # print results to file
 with open('file.txt', 'w') as f:
@@ -46,3 +46,5 @@ with open('file.txt', 'w') as file:
   file.write(filedata)
 
 os.system("./data.prep.sh")
+
+os.system("./netpolicy.sh")
