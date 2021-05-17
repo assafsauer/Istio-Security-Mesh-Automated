@@ -12,6 +12,7 @@ pd.set_option('display.max_seq_items',None)
 pd.set_option('display.max_colwidth', 500)
 pd.set_option('expand_frame_repr', True)
 
+os.system('chmod 777 *.sh')
 
 # get pod list
 os.system('./create.istio.logs.sh')
