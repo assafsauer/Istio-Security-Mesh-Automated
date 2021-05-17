@@ -5,11 +5,9 @@ however , manually configuring it is almost infeasible (specialy when there are 
 The idea behind this repository is to automate Microsegmentation and Authorization with minimum probability of human error and false postivie.   <br/>
 
 ```diff
-Plan:  
-1) automate Network Policie based on the access logs (completed) 
-2) automate Authorization policies based on the access logs (under construction)
-3) Build Traffic Generator based on access logs (under construction)
-4) multi cluster support (future plan)
+functionlty:  
+1) automate Network Policie based on the access logs  
+2) automate Authorization policies based on the access logs  
 ```
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
 
