@@ -26,11 +26,15 @@ https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_l
 **##### automating Networkpolices is simple of that:** 
 ```diff
 
+git clone 
+
 kubectl apply -f demoapp/
 
 browse the app , or run traffic generator 
 
-python3 Istio-log-processing.py
+/home/sauer/Istio-Security-Mesh-Automated# cd Net-policies/
+
+python3 netp-main.py
 
 kubectl apply -f networkpolicies/ -n default
 
@@ -53,4 +57,34 @@ netp.productcatalog.recommendationservice.3550   app=productcatalog   6s
 netp.recommendation.frontend.8080                app=recommendation   6s
 netp.shipping.checkoutservice.50051              app=shipping         6s
 netp.shipping.frontend.50051                     app=shipping         6s
+```
+
+
+**##### automating Authorization Policy is simple of that:** 
+```diff
+/home/sauer/Istio-Security-Mesh-Automated# cd Auth-policy/
+
+python3 auth-main.py
+
+kubectl apply -f authorizations/
+
+as Restuls:
+
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# kubectl get AuthorizationPolicy
+NAME                           AGE
+auth.adservice1                6m21s
+auth.cartservice2              6m21s
+auth.checkoutservice8          6m21s
+auth.currencyservice4          6m21s
+auth.emailservice7             6m20s
+auth.frontend10                6m20s
+auth.frontend12                6m20s
+auth.frontend13                6m20s
+auth.frontend14                6m20s
+auth.frontend9                 6m20s
+auth.paymentservice6           6m20s
+auth.productcatalogservice3    6m20s
+auth.recommendationservice11   6m20s
+auth.shippingservice5          6m20s
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
 ```
