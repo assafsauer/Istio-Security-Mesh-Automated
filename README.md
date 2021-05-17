@@ -1,4 +1,4 @@
-#  Microservice Security: Automation of Networkpolicies and AuthorizationPolicy.
+#  Microservice Security:  AuthorizationPolicy/Networkpolicies automation (based ISTIO).
 
 the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices! <br/>
 however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved). <br/>
