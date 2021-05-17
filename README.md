@@ -94,3 +94,7 @@ auth.recommendationservice11   6m20s
 auth.shippingservice5          6m20s
 root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
 ```
+
+
+![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
+
