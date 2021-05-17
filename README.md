@@ -1,4 +1,4 @@
-#  Automation of Networkpolicies and Authorization for Microservice applications
+#  Automation of Networkpolicies and AuthorizationPolicy for Microservice applications
 
 the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices! <br/>
 however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved). <br/>
