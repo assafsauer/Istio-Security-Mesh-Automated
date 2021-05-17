@@ -96,5 +96,5 @@ root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy#
 ```
 
 
-![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
+![Test Image 1](https://github.com/assafsauer/Istio-Security-Mesh-Automated/blob/main/fb074dcb-4c1c-498c-8fb3-fce8e3cde916.jpeg) 
 
