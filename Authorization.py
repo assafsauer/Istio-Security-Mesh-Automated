@@ -1,4 +1,3 @@
-
 import csv
 import sys
 import pandas as pd
@@ -54,3 +53,7 @@ f = open('logs.csv', 'w')
 
 f.write(cleanq)
 f.close()
+
+
+os.system('./create.auth.sh')
+
