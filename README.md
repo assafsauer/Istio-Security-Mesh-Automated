@@ -21,6 +21,12 @@ https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_l
 
 2) kubectil is mandatory for the script execution. 
 
+3) install:
+pip3 install networkx
+pip3 install pandas
+pip3 install pexpect --upgrade --ignore-installed pexpect
+pip3 install pyvis
+
 ```
 
 **##### automating Networkpolices is simple of that:** 
