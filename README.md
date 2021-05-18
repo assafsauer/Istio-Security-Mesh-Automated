@@ -134,10 +134,9 @@ netp.shipping.frontend.50051                     app=shipping         6s
 ```diff
 /home/sauer/Istio-Security-Mesh-Automated# cd Auth-policy/
 
-add your ns to "create.istio.logs.sh"
-namespace=default
+add your namespace to "create.istio.logs.sh" (namespace=default)
 
-edit "create.auth.sh" and add your ISTIOingress IP and your frontend POD Selector 
+edit "create.auth.sh" and add your ISTIOingress IP and your frontend POD Selector (the POD that ISTIO VirtualService pointing to)
 istioingress=10.9.0.22
 frontend=frontend
 
