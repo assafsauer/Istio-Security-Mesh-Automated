@@ -30,6 +30,7 @@ currency,7000,checkoutservice <br/>
 
 3) based on the final logs , the script will create the following yamls 
 
+```diff
 AuthorizationPolicy: each app (both backend and external ingress) will be restricted by HTTP method and folders
 
 root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# cat authorizations/auth.adservice.1.yaml 
@@ -47,8 +48,9 @@ spec:
     - operation:
         methods: ["POST"]
         paths: ["/hipstershop.AdService/*"]
-    
-    
+```
+
+```diff    
 Networkpllicies: each service will be microsegment for ingress traffic 
 
 kind: NetworkPolicy
@@ -67,7 +69,7 @@ spec:
       ports:
         - protocol: TCP
           port: 9555
-
+```
 
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
 
