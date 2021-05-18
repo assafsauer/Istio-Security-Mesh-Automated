@@ -1,6 +1,6 @@
 # Automation for Service Mesh Authorizationand and Networkplicies.  
 
-####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to fully automate Microsegmentation and Authorization with minimum probability of human errors and false postivie.     
+####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to fully automate Microsegmentation and Authorization with minimum probability of human errors and false postivie.    as results , even if a hacker get access to a privileged POD , he still authrized only for a specific http method (L7) for a specific Service and port (L4).. This will leave him with very limited options to impact other services.
 
 ![Test Image 1](https://github.com/assafsauer/Istio-Security-Mesh-Automated/blob/main/diagram-3.png) 
 
