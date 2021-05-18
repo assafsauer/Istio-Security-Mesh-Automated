@@ -96,6 +96,10 @@ git clone
 
 kubectl apply -f demoapp/
 
+edit your namespace in create.istio.logs.sh and data.prep.sh
+namespace=default
+
+
 browse the app , or run traffic generator 
 
 /home/sauer/Istio-Security-Mesh-Automated# cd Net-policies/
@@ -129,6 +133,14 @@ netp.shipping.frontend.50051                     app=shipping         6s
 **##### automating Authorization Policy is simple of that:** 
 ```diff
 /home/sauer/Istio-Security-Mesh-Automated# cd Auth-policy/
+
+add your ns to "create.istio.logs.sh"
+namespace=default
+
+edit "create.auth.sh" and add your ISTIOingress IP and your frontend POD Selector 
+istioingress=10.9.0.22
+frontend=frontend
+
 
 python3 auth-main.py
 
