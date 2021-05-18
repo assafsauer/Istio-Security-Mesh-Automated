@@ -23,7 +23,7 @@ cart,7070,checkoutservice <br/>
 productcatalog,3550,checkoutservice <br/>
 currency,7000,checkoutservice <br/>
 
-3) based on the final logs , the script will create the following yamls 
+3) based on the final logs , the script will create the following policies in yaml format: 
 
 ```diff
 AuthorizationPolicy: each app (both backend and external ingress) will be restricted by HTTP method and folders
