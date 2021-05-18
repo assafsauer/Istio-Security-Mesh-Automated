@@ -9,6 +9,66 @@ functionlty:
 1) automate Network Policie based on the access logs  
 2) automate Authorization policies based on the access logs  
 ```
+how does it works? <br/>
+1) the script aggregate the envoy access logs from all pods in a namespace to a centralized  log <br/>
+2) than , it is parsing the log to extract only the relevant ifnormation , for example: <br/>
+
+*final AuthorizationPolicy logs: <br/>
+POST /hipstershop.AdService/ adservice <br/>
+POST /hipstershop.CartService/ cartservice <br/>
+POST /hipstershop.ProductCatalogService/ productcatalogservice <br/>
+POST /hipstershop.CurrencyService/ currencyservice <br/>
+POST /hipstershop.ShippingService/ shippingservice <br/>
+
+
+*final Networkpolices logs: <br/>
+ad,9555,frontend <br/>
+cart,7070,frontend <br/>
+cart,7070,checkoutservice <br/>
+productcatalog,3550,checkoutservice <br/>
+currency,7000,checkoutservice <br/>
+
+3) based on the final logs , the script will create the following yamls 
+
+AuthorizationPolicy: each app (both backend and external ingress) will be restricted by HTTP method and folders
+
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# cat authorizations/auth.adservice.1.yaml 
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.adservice1
+spec:
+  selector:
+    matchLabels:
+      app: adservice
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/hipstershop.AdService/*"]
+    
+    
+Networkpllicies: each service will be microsegment for ingress traffic 
+
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: netp.ad.frontend.9555 
+spec:
+  podSelector:
+    matchLabels:
+      app: ad 
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            app: frontend
+      ports:
+        - protocol: TCP
+          port: 9555
+
+
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
 
 
