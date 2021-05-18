@@ -4,7 +4,7 @@
 
 ![Test Image 1](https://github.com/assafsauer/Istio-Security-Mesh-Automated/blob/main/diagram-3.png) 
 
-how does it works? <br/>
+#### so , how does it works? <br/>
 1) the script aggregate the envoy access logs from all pods in a namespace to a centralized  log <br/>
 2) than , it is parsing the log to extract only the relevant ifnormation , for example: <br/>
 
