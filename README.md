@@ -3,9 +3,9 @@
 ####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to fully automate Microsegmentation and Authorization with minimum probability of human errors and false postivie.    
 
  
-##functionlty:  
-##1) automate Network Policie based on the access logs  
-##2) auomate Authorization policies based on the access logs  
+## functionlty:  
+## 1) automate Network Policie based on the access logs  
+## 2) auomate Authorization policies based on the access logs  
 
 how does it works? <br/>
 1) the script aggregate the envoy access logs from all pods in a namespace to a centralized  log <br/>
