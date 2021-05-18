@@ -4,8 +4,8 @@
 
  
 ## functionlty:  
-## 1) automate Network Policie based on the access logs  
-## 2) auomate Authorization policies based on the access logs  
+#### 1) automate Network Policie based on the access logs  
+#### 2) auomate Authorization policies based on the access logs  
 
 how does it works? <br/>
 1) the script aggregate the envoy access logs from all pods in a namespace to a centralized  log <br/>
