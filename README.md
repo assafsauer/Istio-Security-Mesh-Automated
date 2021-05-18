@@ -2,6 +2,8 @@
 
 ####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to fully automate Microsegmentation and Authorization with minimum probability of human errors and false postivie.     
 
+![Test Image 1](https://github.com/assafsauer/Istio-Security-Mesh-Automated/blob/main/fb074dcb-4c1c-498c-8fb3-fce8e3cde916.jpeg) 
+
 how does it works? <br/>
 1) the script aggregate the envoy access logs from all pods in a namespace to a centralized  log <br/>
 2) than , it is parsing the log to extract only the relevant ifnormation , for example: <br/>
@@ -70,7 +72,8 @@ spec:
 
 
 ```diff
-Notes:
+### Notes: ###
+
 1) the code is aggrigating/parsing the default structure of Encoy access log , Customising the istio access logs , might damage the script.
 Envoy official Access logging document: 
 https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#default-format-string
@@ -152,5 +155,4 @@ root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy#
 ```
 
 
-![Test Image 1](https://github.com/assafsauer/Istio-Security-Mesh-Automated/blob/main/fb074dcb-4c1c-498c-8fb3-fce8e3cde916.jpeg) 
 
