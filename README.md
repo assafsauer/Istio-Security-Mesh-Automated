@@ -1,4 +1,4 @@
-#  Microservice-SecOps:  E2E Securtiy automation for Authorization (L7) and Network(L4) policies combined (based ISTIO)
+# Automation for MicroServices Mesh Authorization and Networkplicies combined.  
 
 ####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to fully automate Microsegmentation and Authorization with minimum probability of human errors and false postivie.     
 
