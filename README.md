@@ -1,8 +1,8 @@
 #  Microservice Security:  AuthorizationPolicy/Networkpolicies automation (based ISTIO).
 
-######  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices! <br/>
-###### however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved). <br/>
-###### The idea behind this repository is to automate Microsegmentation and Authorization with minimum probability of human error and false postivie.   <br/>
+####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices! <br/>
+#### however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved). <br/>
+#### The idea behind this repository is to automate Microsegmentation and Authorization with minimum probability of human error and false postivie.   <br/>
 
 ```diff
 functionlty:  
