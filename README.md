@@ -63,6 +63,7 @@ spec:
         - protocol: TCP
           port: 9555
 ```
+####  The diagram below illustrate the flow
 
 ![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
 
