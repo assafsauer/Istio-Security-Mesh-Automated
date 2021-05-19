@@ -40,7 +40,7 @@ filedata = filedata.replace(':', ' ')
 #filedata  = re.sub(r":.*", "",filedata )
 
 # Replace the target string
-filedata = filedata.replace('service ', ' ')
+#filedata = filedata.replace('service ', ' ')
 
 # Write the file out again
 with open('file.txt', 'w') as file:
