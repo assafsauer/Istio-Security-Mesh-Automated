@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -r networkpolicies
 mkdir networkpolicies 
 while IFS="" read -r line 
 do
