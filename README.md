@@ -87,6 +87,15 @@ pip3 install pandas
 pip3 install pexpect --upgrade --ignore-installed pexpect
 pip3 install pyvis
 
+4) for the moment MTLS and Networkpolicies are not supported, you need to disable MTLS by appying PeerAuthentication to the namespace:
+
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: disable
+spec:
+  mtls:
+    mode: DISABLE 
 ```
 
 **##### automating Networkpolices is simple of that:** 
