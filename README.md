@@ -97,7 +97,7 @@ spec:
   mtls:
     mode: DISABLE 
 
-5) the GIT is stil underconstruction.   AuthorizationPolicy policy works.  still need to improve the networkpolicies identification
+5) the repository is stil underconstruction.   AuthorizationPolicy policy tested and proved to be reliable. i still need to improve the networkpolicies identification
 ```
 
 **##### automating Networkpolices is simple of that:** 
