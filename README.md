@@ -179,5 +179,65 @@ auth.shippingservice5          6m20s
 root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
 ```
 
+```diff
+
+Test results (HEAD METHOD Forbidden for frontend , blocked by policy auth.frontend11)
+
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.frontend11
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/product/*"]
+
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# curl -i --request HEAD -H 'Cache-Control: no-cache'  http://10.9.0.36/product/66VCHSJNUP
+Warning: Setting custom HTTP method to HEAD with -X/--request may not work the 
+Warning: way you want. Consider using -I/--head instead.
+HTTP/1.1 200 OK
+set-cookie: shop_session-id=115c5b9b-4928-40c3-8e82-4d36bcadaf27; Max-Age=172800
+date: Sat, 22 May 2021 10:49:49 GMT
+content-type: text/html; charset=utf-8
+x-envoy-upstream-service-time: 70
+server: istio-envoy
+transfer-encoding: chunked
 
 
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# kubectl create -f authorizations/
+authorizationpolicy.security.istio.io/auth.169.254.169.25415 created
+authorizationpolicy.security.istio.io/auth.adservice1 created
+authorizationpolicy.security.istio.io/auth.cartservice2 created
+authorizationpolicy.security.istio.io/auth.checkoutservice8 created
+authorizationpolicy.security.istio.io/auth.currencyservice4 created
+authorizationpolicy.security.istio.io/auth.emailservice7 created
+authorizationpolicy.security.istio.io/auth.frontend11 created
+authorizationpolicy.security.istio.io/auth.frontend12 created
+authorizationpolicy.security.istio.io/auth.frontend13 created
+authorizationpolicy.security.istio.io/auth.frontend14 created
+authorizationpolicy.security.istio.io/auth.frontend9 created
+authorizationpolicy.security.istio.io/auth.paymentservice6 created
+authorizationpolicy.security.istio.io/auth.productcatalogservice3 created
+authorizationpolicy.security.istio.io/auth.recommendationservice10 created
+authorizationpolicy.security.istio.io/auth.shippingservice5 created
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
+
+
+root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# curl -i --request HEAD -H 'Cache-Control: no-cache'  http://10.9.0.36/product/66VCHSJNUP
+Warning: Setting custom HTTP method to HEAD with -X/--request may not work the 
+Warning: way you want. Consider using -I/--head instead.
+HTTP/1.1 403 Forbidden
+content-length: 19
+content-type: text/plain
+date: Sat, 22 May 2021 10:50:24 GMT
+server: istio-envoy
+x-envoy-upstream-service-time: 0
+
+```
