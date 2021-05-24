@@ -15,3 +15,6 @@ while IFS= read -r line; do   app=$(echo $line | awk '{print $1}')  ; ip=$(echo 
 
 
 sed 's/^[^ ]* //' file.txt | awk '{$4=$4=""; print $0}' | awk '!seen[$0]++' |  grep -v '\([0-9]\+\.\)\{3\}[0-9]\+'  > uniqe.list
+
+# prepare CSV for the diagram
+cat uniqe.list | awk '{$1=$1}1' OFS="," > uniqe.list.csv
