@@ -178,8 +178,13 @@ auth.recommendationservice11   6m20s
 auth.shippingservice5          6m20s
 root@jump-5:/home/sauer/Istio-Security-Mesh-Automated/Auth-policy# 
 ```
+```diff
+Create Diagram:
+python3 diagram.py
+cp AssafNetworkGraph.html /var/www/html/
+chmod 775 /var/www/html/*
+```
 
-Create Diagram (python3 diagram.py)
 ![image](https://user-images.githubusercontent.com/22165556/119303148-8be9b480-bc65-11eb-9e79-e6175aa4815b.png)
 
 
