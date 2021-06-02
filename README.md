@@ -70,8 +70,6 @@ spec:
 ```
 ####  The diagram below illustrate the flow
 
-#![Test Image 1](https://github.com/assafsauer/Istio-sec-automation/blob/main/istio%20diagram%202.png) 
-
 ![image](https://user-images.githubusercontent.com/22165556/120425247-26d14580-c36e-11eb-89f3-4d3c965f35f3.png)
 
 
