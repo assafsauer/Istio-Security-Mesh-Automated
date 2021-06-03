@@ -32,15 +32,11 @@ f = open('logs.csv')
 text = f.read()
 f.close()
 
+######## extract the HTTP till the /    ########
 clean = re.sub('(?:(?!\/).)*,HTTP.*\/.*"', '', text)
-
-#cleanq = re.sub(r'"', '', text)
-#cleanc = re.sub(r',', '\s', text)
 f = open('logs.csv', 'w')
 
 f.write(clean)
-#f.write(cleanq)
-#f.write(cleanc)
 f.close()
 
 
@@ -48,6 +44,7 @@ f = open('logs.csv')
 text = f.read()
 f.close()
 
+######## extract "    ########
 cleanq = re.sub(r'"', '', text)
 f = open('logs.csv', 'w')
 
