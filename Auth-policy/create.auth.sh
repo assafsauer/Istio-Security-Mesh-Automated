@@ -2,10 +2,15 @@
 istioingress=10.9.0.22
 frontend=frontend
 
-# clean file and filter uniqe rules
+#########   clean file and filter uniqe rules ######### 
 cat logs.csv |sed 's/,/ /g' | sed "s/:.*//" | sed 's/\/\//\//g'|  awk '!seen[$0]++' | awk '{if (NR!=1) {print}}'  > auth.log
+
+#########  convert ingress ip to pod selector (frontend) ######### 
 cat  auth.log |sed  "s/${istioingress}/${frontend}/g" |sed 's/"//g' > final.auth.log 
 
+
+
+#########  Create authorizations Policies yaml ######### 
 
 a=1
 mkdir authorizations 
