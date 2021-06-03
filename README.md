@@ -149,7 +149,13 @@ netp.shipping.frontend.50051                     app=shipping         6s
 add your namespace to "create.istio.logs.sh" (namespace=default)
 
 edit "create.auth.sh" and add your ISTIOingress IP and your frontend POD Selector (the POD that ISTIO VirtualService pointing to)
-istioingress=10.9.0.22
+
+
+istioingres=$(kubectl get svc -n istio-system  istio-ingressgateway | awk 'NR==2 { print $4 }')
+echo $istioingres
+10.9.0.36
+ 
+istioingress=10.9.0.36
 frontend=frontend
 
 
