@@ -1,5 +1,9 @@
 #!/bin/bash
-istioingress=10.9.0.22
+
+##### vars #####
+
+istioingress=10.9.0.36
+###  istioingres=$(kubectl get svc -n istio-system  istio-ingressgateway | awk 'NR==2 { print $4 }')
 frontend=frontend
 
 #########   clean file and filter uniqe rules ######### 
