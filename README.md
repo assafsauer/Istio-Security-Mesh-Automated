@@ -1,4 +1,4 @@
-# Automation for Service Mesh Authorizationand and Network policies.  
+# Automation for ISTIO Authorizationand and K8s Networkpolicies.  
 
 ####  the combination of Networkpolices and Authorization policies might be the ultimate approach for securing microservices!   however , manually configuring it is almost infeasible (specialy when there are hundreds of services and containers involved).  the idea behind this repository is to provide full automation for  Microsegmentation and Authorization with minimum probability of human errors and false postivie.  
 as results , even if a hacker get access to a privileged POD , he still authrized only for a specific http method (L7) and for a specific Service and port (L4).. This leaves him with a very limited options to impact/compromise other services.
