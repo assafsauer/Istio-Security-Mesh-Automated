@@ -84,7 +84,7 @@ https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_l
 
 3) install:
 pip3 install networkx
-pip3 install pandas
+pip3 install pandas (python3 -m pip install pandas)
 pip3 install pexpect --upgrade --ignore-installed pexpect
 pip3 install pyvis
 
